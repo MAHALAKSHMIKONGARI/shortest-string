@@ -24,6 +24,15 @@ table
     overflow: hidden;
     border-collapse: collapse;
 }
+input:invalid+span:after {
+  content: '✖';
+  padding-left: 5px;
+}
+
+input:valid+span:after {
+  content: '✓';
+  padding-left: 5px;
+}
 </style>
 
 <body class="d-flex flex-column sticky-footer-wrapper">
@@ -35,17 +44,20 @@ table
      <div class="col-md-7 mb-4">
         <fieldset class="mt-4">
           <label for="string1">String 1 :</label>
-          <input id="string1" type="text" value="">
+          <input id="string1" type="text" min="0" max="100" required value="">
+          <span class="validity"></span>
         </fieldset>
 
         <fieldset class="mt-4">
           <label for="string2">String 2 :</label>
-          <input id="string2" type="text" value="">
+          <input id="string2" type="text" value="" min="0" max="100" required>
+          <span class="validity"></span>
         </fieldset>
 
         <fieldset class="mt-4">
           <label for="string3">String 3 :</label>
-          <input id="string3" type="text" value="">
+          <input id="string3" type="text" value="" min="0" max="100" required>
+          <span class="validity"></span>
         </fieldset>
  
             <br>
