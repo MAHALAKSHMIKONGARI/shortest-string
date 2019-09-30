@@ -18,7 +18,7 @@ function calculations()
     }
 
     //Modifying HTML page with the calculations output
-    document.querySelector('#result').innerHTML = initial
+    document.querySelector('#result').innerHTML = `Shortest String is ${initial}`
 }
 document.querySelector('#calculate').addEventListener('click', calculations)
 
